@@ -31,7 +31,7 @@ export function* navigateToPath({ path }) {
 export function* printPage() {
   try {
     yield call(() => {
-      window.print();
+      global.print();
     });
     yield put({ type: PRINT_SUCCESS });
   } catch (e) {
